@@ -22,7 +22,7 @@ class MoviewCollectionViewCell: UICollectionViewCell {
     }
     func display(item: MovieItem){
         self.lblTitle.text = item.title
-        self.lblDate.text = item.date
+        self.lblDate.setFormatterDate(dateString: item.date)
         self.lblRating.text = item.rating
         self.imgViewMovie.load(urlString: item.img)
     }

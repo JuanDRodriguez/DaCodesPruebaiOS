@@ -21,3 +21,18 @@ extension UIImageView{
         }
     }
 }
+extension UILabel{
+    func setFormatterDate(dateString: String ){
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "YYYY-MM-dd"
+
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "dd-MMM-YYYY"
+
+        if let date = dateFormatterGet.date(from: dateString) {
+            self.text = dateFormatterPrint.string(from: date)
+        } else{
+            self.text = dateString
+        }
+    }
+}

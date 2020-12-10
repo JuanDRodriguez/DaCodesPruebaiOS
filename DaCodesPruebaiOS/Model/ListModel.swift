@@ -31,7 +31,7 @@ class ListModel: MovieModelInput {
                             let title = item["original_title"] as? String,
                             let rating  = item["vote_average"] as? Double,
                             let img = item["poster_path"] as? String,
-                            let date = item["release_date"] as? String{
+                            var date = item["release_date"] as? String{
                                 
                             movies.append(MovieItem.init(id: String(id), title: title, rating: String(rating), img: img, date: date))
                             }

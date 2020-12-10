@@ -19,7 +19,7 @@ class DetailView: UIView, DetailViewInput {
     func display(_ item: DetailItem) {
         self.lblTitle.text = item.title
         self.lblTime.text = item.time
-        self.lblDate.text = item.date
+        self.lblDate.setFormatterDate(dateString: item.date) 
         self.lblRating.text = item.rating
         self.lblGenre.text = item.genre
         self.lblDescription.text = item.description
