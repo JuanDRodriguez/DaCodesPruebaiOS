@@ -37,7 +37,7 @@ class ListModel: MovieModelInput {
                             }
                         }
                         
-                        self.page = reload ? 1 : (page + 1)
+                        self.page +=  1 
                         self.out.modelDidload(movies)
                       }
                   }
